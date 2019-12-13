@@ -50,16 +50,68 @@ type person struct {
 func NewPerson(name string) *person {
 	return &person{
 		Name: name,
-		age:  0,
-		sal:  0,
 	}
 }
+
 //为了反问age和sal
-func (p *person) SetAge(age int)  {
-	if age>0 && age<150{
-		p.age =age
-	}else {
+func (p *person) SetAge(age int) {
+	if age > 0 && age < 150 {
+		p.age = age
+	} else {
 		fmt.Println("年龄不正确")
+	}
+
+}
+
+func (p *person) GetAge() int {
+	return p.age
+}
+
+func (p *person) SetSal(sal int) {
+	if age > 3000 && age <= 30000 {
+		p.age = sal
+	} else {
+		fmt.Println("薪水范围不正确")
+	}
+
+}
+
+func (p *person) GetSal() float64 {
+	return p.sal
+}
+
+// TODO 课堂练习：
+/*
+1) 创建程序,在 model 包中定义 Account 结构体：在 main 函数中体会 Golang 的封装性。
+2) Account 结构体要求具有字段：账号（长度在 6-10 之间）、余额(必须>20)、密码（必须是六
+3) 通过 SetXxx 的方法给 Account 的字段赋值。
+4) 在 main 函数中测试
+
+*/
+
+type account struct {
+	accountNa string
+	pwd  int
+	money    float64
+}
+
+func NewAccount(accountNa string,pwd int,money float64 ) *account  {
+	if 6> len(accountNa) || len(accountNa)>10 {
+		fmt.Println("输入账号格式不对")
+		return nil
+	}
+	if pwd <6{
+		fmt.Println("输入密码格式不对")
+		return nil
+	}
+	if money <20{
+		fmt.Println("金额最少20")
+		return nil
+	}
+	return &account{
+		accountNa: accountNa,
+		pwd:       pwd,
+		money:     money,
 	}
 
 }
