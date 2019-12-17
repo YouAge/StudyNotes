@@ -78,9 +78,11 @@ func len_Str()  {
 
 
 func main()  {
+	keys:= ""
 	fmt.Println("1234")
 	// len()函数
 	len_Str()
-
-
+	fmt.Println("输入：")
+	key,err := fmt.Scanln(&keys)
+	fmt.Println(key,err)
 }

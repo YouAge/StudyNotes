@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	g "接口-面向对象/账单项目"
+)
 
 /*
 todo  简介
@@ -35,7 +38,6 @@ todo 接口注意事项
 
 */
 
-
 type AInterface interface {
 	Say()
 }
@@ -43,30 +45,32 @@ type Stu struct {
 	Name string
 }
 
-func (stu Stu) Say()  {
-	stu.Name="sdfs"
-	fmt.Println("Stu Say()",stu.Name)
+func (stu Stu) Say() {
+	stu.Name = "sdfs"
+	fmt.Println("Stu Say()", stu.Name)
 }
 
 //4
 type integer int
-func (i integer) Say(){
-	fmt.Println("integer Say()",i)
+
+func (i integer) Say() {
+	fmt.Println("integer Say()", i)
 }
 
-
-func mainTwo()  {
-	var stu Stu // 接口变量实现
-	var a AInterface = stu  //可以指向一个实现了该接口的自定义类型的变量(实例)
+func mainTwo() {
+	var stu Stu            // 接口变量实现
+	var a AInterface = stu //可以指向一个实现了该接口的自定义类型的变量(实例)
 	a.Say()
 
-	var i integer =10
-	var c AInterface  =i
+	var i integer = 10
+	var c AInterface = i
 
 	c.Say()
 }
 
-func main()  {
+func main() {
 	mainTwo()
-
+	// 项目，调包
+	b :=g.NewFamilyAccount()
+	b.MainMenu()
 }
