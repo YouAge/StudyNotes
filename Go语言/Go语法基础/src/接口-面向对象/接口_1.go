@@ -71,6 +71,6 @@ func mainTwo() {
 func main() {
 	mainTwo()
 	// 项目，调包
-	b :=g.NewFamilyAccount()
-	b.MainMenu()
+	g.NewFamilyAccount().MainMenu()
+
 }

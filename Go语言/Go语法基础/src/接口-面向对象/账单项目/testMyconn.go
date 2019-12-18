@@ -2,6 +2,7 @@ package 账单项目
 
 import "fmt"
 
+// 面向过程编程
 func menu() {
 
 	key := ""    // 用来介绍用户输入的指令
@@ -65,6 +66,8 @@ func menu() {
 	fmt.Println("退出")
 }
 
+// 面向对象编程
+
 type FamilyAccount struct {
 	key     string
 	loop    bool
@@ -74,7 +77,7 @@ type FamilyAccount struct {
 	note    string
 	details string
 }
-// 工程模式调度
+// 工程模式共外部调度
 func NewFamilyAccount() *FamilyAccount {
 	return &FamilyAccount{
 		key:     "",
@@ -91,6 +94,14 @@ func NewFamilyAccount() *FamilyAccount {
 
 
 func (this *FamilyAccount) MainMenu() {
+
+	fmt.Println("--------------家庭收支账本欢迎你--------------")
+	// 新增登入注册功能
+
+	fmt.Println("请输入登入用户名：")
+	fmt.Scanln(&this.key)
+
+
 	// 菜单
 	for {
 		fmt.Println("-----------------家庭收入支出菜单------------------------")

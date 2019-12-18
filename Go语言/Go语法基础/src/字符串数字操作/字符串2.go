@@ -72,12 +72,33 @@ func len_Str()  {
 	//
 }
 
+func main2()  {
+	str := "I love my work and I love my family too"
 
+	// 按空格拆分
+	ret := strings.Fields(str)
+	//for _,key := range ret {
+	//
+	//}
+	fmt.Println(ret)
+	// 判断字符串字符串结束标记
+	flg := strings.HasSuffix("sdfsdfs.abc","abc")
+	fmt.Println(flg)
 
+	//判断字符串起始标识
+	str2 := `sdfsadfhisadgoahsoidghoiwahoigf
+asdjgpofasjpodgjposdj	fmt.Println(ret)
+	// 判断字符串字符串结束标记
+	flg := strings.HasSuffix("sdfsdfs.abc","abc")
+	fmt.Println(flg)gposdpogspojsdpojgspojgpoj"sfw"`
+	fmt.Println(str2)
+
+}
 
 
 
 func main()  {
+	main2()
 	keys:= ""
 	fmt.Println("1234")
 	// len()函数
