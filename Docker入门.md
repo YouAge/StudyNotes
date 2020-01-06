@@ -360,7 +360,7 @@ conda info -e
 #删除环境
 remove -n flowers 
 #退出环境
-deactivate
+deactivate    ==》 conda  deactivate
 #升级当前版本的conda
 conda update conda
 ##

@@ -99,6 +99,7 @@ venv.bak/
 工作host/
 # mkdocs documentation
 /site
+./Go语言/Go语法基础/src/github.com/
 .git/
 .idea
 log/
