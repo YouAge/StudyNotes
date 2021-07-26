@@ -6,6 +6,14 @@
 > 可视化给工具 推荐使用：  `sourcetree` 非常方便切换提交版本历史记录 、
 > <https://www.sourcetreeapp.com/>
 
+## Git global setup
+
+```git
+git config --global user.name "Administrator"
+git config --global user.email "admin@example.com"
+```
+
+
 
 ## 项目初始中
 
@@ -13,16 +21,32 @@
 
 ```
 git init
-
+git remote add origin http://
+git add .
+git commit -m "Initial commit"
+git push -u origin master
 ```
 
 ### 2.远程创库创建项目
 
 ```git
 
-git clone 地址
+git clone http://
+cd monitoring
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
 ```
 
+##　Push an existing Git repository
+```
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin http://localhost:8888/gitlab-instance-516e7dd4/monitoring.git
+git push -u origin --all
+git push -u origin --tags
+```
 
 
 
