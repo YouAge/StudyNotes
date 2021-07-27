@@ -54,7 +54,7 @@ $ pm2 start app.js -i max -- -a 23 在--之后给 app.js 传递参数
 
 ```
 
-## 听过配置文件
+## json配置文件
 
 ```json
 {

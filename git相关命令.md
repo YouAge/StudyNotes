@@ -9,8 +9,11 @@
 ## Git global setup
 
 ```git
-git config --global user.name "Administrator"
-git config --global user.email "admin@example.com"
+git config --global user.name "Mental"
+git config --global user.email "1010227175@qq.com"
+
+ssh-keygen -o # 设置公钥  
+cat ~/.ssh/id_rsa.pub  # 查看
 ```
 
 
@@ -39,7 +42,7 @@ git commit -m "add README"
 git push -u origin master
 ```
 
-##　Push an existing Git repository
+##　推送到已有的分支上
 ```
 cd existing_repo
 git remote rename origin old-origin

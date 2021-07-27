@@ -106,3 +106,5 @@ log/
 # mypy
 .mypy_cache/
 .gitignore
+
+**/node_modules

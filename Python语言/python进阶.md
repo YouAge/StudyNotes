@@ -447,14 +447,14 @@ finally:
 #### python虚拟环境使用
 ```python
 
-
+```sh
 $ pip install virtualenv
 $ virtualenv venv  #创建一个venv名字的虚拟环境
 $ source venv/bin/activate  #激活虚拟环境
 $ virtualenv -p /usr/bin/python3 venv  # -p参数指定Python解释器程序路径
 $ deactivate  # 退出虚拟环境
 $ rm -rf venv  # 删除虚拟环境
-
+```
 
 
 
